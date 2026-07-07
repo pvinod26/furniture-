@@ -1,0 +1,1794 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===========================
+   ROOT VARIABLES
+=========================== */
+
+:root{
+
+    --bg:#F8F6F3;
+
+    --white:#ffffff;
+
+    --primary:#7B4F35;
+
+    --primary-hover:#5F3C28;
+
+    --secondary:#E8D8C4;
+
+    --green:#25D366;
+
+    --green-hover:#1EBE5D;
+
+    --text:#2D2D2D;
+
+    --light:#7A7A7A;
+
+    --border:#ECECEC;
+
+    --shadow:0 8px 25px rgba(0,0,0,.08);
+
+    --radius:18px;
+
+}
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    display:flex;
+
+    justify-content:center;
+
+    min-height:100vh;
+
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#eee;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--primary-hover);
+
+}
+
+/* ===========================
+   APP CONTAINER
+=========================== */
+
+.app-container{
+
+    width:100%;
+
+    max-width:480px;
+
+    min-height:100vh;
+
+    background:var(--white);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+/* ===========================
+   COMMON HEADINGS
+=========================== */
+
+h1{
+
+    font-size:2rem;
+
+    font-weight:700;
+
+}
+
+h2{
+
+    font-size:1.5rem;
+
+    font-weight:600;
+
+}
+
+h3{
+
+    font-size:1.1rem;
+
+    font-weight:600;
+
+}
+
+p{
+
+    color:var(--light);
+
+    line-height:1.6;
+
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.btn-primary{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.btn-primary:hover{
+
+    background:var(--primary-hover);
+
+    transform:translateY(-2px);
+
+}
+
+/* ===========================
+   COMMON CARD
+=========================== */
+
+.card{
+
+    background:var(--white);
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+/* ===========================
+   FADE ANIMATION
+=========================== */
+
+.fade{
+
+    animation:fade .6s ease;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/* ===================================================
+                WELCOME PAGE
+=================================================== */
+
+.welcome-container{
+
+    width:100%;
+    min-height:100vh;
+
+    background:
+    linear-gradient(rgba(255,255,255,.55),rgba(255,255,255,.55)),
+    url("https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=80");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:25px;
+
+}
+
+.welcome-card{
+
+    width:100%;
+    max-width:380px;
+
+    background:rgba(255,255,255,.88);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:25px;
+
+    padding:40px 30px;
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.12);
+
+    animation:fade .7s ease;
+
+}
+
+.welcome-icon{
+
+    width:90px;
+    height:90px;
+
+    background:#f7efe7;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin:auto;
+
+    font-size:45px;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+.welcome-card h1{
+
+    text-align:center;
+
+    color:var(--primary);
+
+    margin-bottom:12px;
+
+    font-size:34px;
+
+}
+
+.welcome-card p{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+    color:#555;
+
+    font-size:15px;
+
+}
+
+/* INPUT */
+
+.input-group{
+
+    width:100%;
+
+    height:58px;
+
+    background:white;
+
+    border-radius:15px;
+
+    border:2px solid #eee;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:0 18px;
+
+    transition:.3s;
+
+    margin-bottom:25px;
+
+}
+
+.input-group:hover{
+
+    border-color:#d9b99b;
+
+}
+
+.input-group:focus-within{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 4px rgba(121,85,72,.12);
+
+}
+
+.input-group i{
+
+    color:#888;
+
+    font-size:18px;
+
+}
+
+.input-group input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    padding-left:12px;
+
+    font-size:16px;
+
+    background:transparent;
+
+}
+
+.input-group input::placeholder{
+
+    color:#999;
+
+}
+
+/* BUTTON */
+
+.btn-primary{
+
+    width:100%;
+
+    height:58px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.btn-primary:hover{
+
+    background:var(--primary-hover);
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 25px rgba(121,85,72,.25);
+
+}
+
+/* SMALL TEXT */
+
+.welcome-note{
+
+    text-align:center;
+
+    margin-top:22px;
+
+    font-size:13px;
+
+    color:#777;
+
+}
+
+/* FOOTER */
+
+.welcome-footer{
+
+    margin-top:35px;
+
+    text-align:center;
+
+    font-size:12px;
+
+    color:#999;
+
+}
+
+/* ===================================================
+                    HOME PAGE
+===================================================*/
+
+/* ---------- Header ---------- */
+
+.header{
+
+    width:100%;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 22px;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:999;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.05);
+
+}
+
+.header h2{
+
+    color:var(--primary);
+
+    font-size:24px;
+
+    font-weight:700;
+
+}
+
+.back-btn,
+.cart-icon{
+
+    font-size:24px;
+
+    color:var(--text);
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.back-btn:hover,
+.cart-icon:hover{
+
+    color:var(--primary);
+
+}
+
+
+/* ---------- Hero Banner ---------- */
+
+.hero-banner{
+
+    margin:18px;
+
+    height:220px;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    background:url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+.hero-banner::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+        to right,
+
+        rgba(0,0,0,.65),
+
+        rgba(0,0,0,.15)
+
+    );
+
+}
+
+.hero-content{
+
+    position:absolute;
+
+    left:25px;
+
+    top:30px;
+
+    z-index:2;
+
+    width:65%;
+
+}
+
+.hero-content h2{
+
+    color:white;
+
+    font-size:34px;
+
+    line-height:1.25;
+
+    margin-bottom:12px;
+
+}
+
+.hero-content p{
+
+    color:white;
+
+    opacity:.9;
+
+    margin-bottom:18px;
+
+}
+
+.hero-btn{
+
+    display:inline-block;
+
+    background:var(--primary);
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:12px 22px;
+
+    border-radius:10px;
+
+    transition:.3s;
+
+}
+
+.hero-btn:hover{
+
+    background:var(--primary-hover);
+
+}
+
+
+/* ---------- Section ---------- */
+
+.section-title{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:25px 20px 18px;
+
+}
+
+.section-title h3{
+
+    font-size:22px;
+
+}
+
+.section-title a{
+
+    text-decoration:none;
+
+    color:var(--primary);
+
+    font-size:15px;
+
+}
+
+
+/* ---------- Category Grid ---------- */
+
+.category-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+    padding:0 20px 110px;
+
+}
+
+
+/* ---------- Category Card ---------- */
+
+.category-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    text-decoration:none;
+
+    color:inherit;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.06);
+
+    transition:.35s;
+
+}
+
+.category-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 28px rgba(0,0,0,.12);
+
+}
+
+.category-card img{
+
+    width:100%;
+
+    height:130px;
+
+    object-fit:cover;
+
+}
+
+.category-info{
+
+    padding:16px;
+
+    text-align:center;
+
+}
+
+.category-info h4{
+
+    font-size:18px;
+
+    margin-bottom:6px;
+
+}
+
+.category-info span{
+
+    font-size:14px;
+
+    color:#777;
+
+}
+
+
+/* ---------- Bottom Navigation ---------- */
+
+.bottom-nav{
+
+    position:fixed;
+
+    bottom:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:100%;
+
+    max-width:480px;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    padding:15px 0;
+
+    box-shadow:0 -5px 18px rgba(0,0,0,.08);
+
+    border-top-left-radius:18px;
+
+    border-top-right-radius:18px;
+
+}
+
+.nav-item{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    color:#888;
+
+    font-size:13px;
+
+    transition:.3s;
+
+}
+
+.nav-item i{
+
+    font-size:22px;
+
+    margin-bottom:5px;
+
+}
+
+.nav-item.active{
+
+    color:var(--primary);
+
+}
+
+.nav-item:hover{
+
+    color:var(--primary);
+
+}
+/* ===================================================
+                CATEGORY PAGE
+=================================================== */
+
+.category-header{
+
+    padding:20px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.category-header h2{
+
+    font-size:28px;
+
+    color:var(--primary);
+
+}
+
+.category-header span{
+
+    color:#777;
+
+    font-size:14px;
+
+}
+
+/* -------- Search Bar -------- */
+
+.search-box{
+
+    margin:0 20px 20px;
+
+    background:white;
+
+    border-radius:15px;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:14px 18px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.05);
+
+}
+
+.search-box input{
+
+    width:100%;
+
+    border:none;
+
+    outline:none;
+
+    margin-left:12px;
+
+    font-size:15px;
+
+}
+
+/* -------- Product List -------- */
+
+.product-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    padding:0 20px 100px;
+
+}
+
+/* -------- Card -------- */
+
+.product-list-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    display:flex;
+
+    overflow:hidden;
+
+    text-decoration:none;
+
+    color:inherit;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.05);
+
+    transition:.35s;
+
+}
+
+.product-list-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 18px 28px rgba(0,0,0,.10);
+
+}
+
+/* -------- Image -------- */
+
+.product-list-card img{
+
+    width:120px;
+
+    height:120px;
+
+    object-fit:cover;
+
+}
+
+/* -------- Right Side -------- */
+
+.product-info{
+
+    flex:1;
+
+    padding:18px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+}
+
+.product-info h4{
+
+    font-size:20px;
+
+    margin-bottom:8px;
+
+}
+
+.product-info p{
+
+    color:#777;
+
+    font-size:14px;
+
+    line-height:1.5;
+
+}
+
+/* -------- Bottom -------- */
+
+.product-bottom{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:15px;
+
+}
+
+.price{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+}
+
+.view-btn{
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:10px 16px;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    transition:.3s;
+
+}
+
+.view-btn:hover{
+
+    background:var(--primary-hover);
+
+}
+
+/* -------- Badge -------- */
+
+.product-tag{
+
+    display:inline-block;
+
+    background:#F4E7DD;
+
+    color:var(--primary);
+
+    font-size:12px;
+
+    padding:5px 10px;
+
+    border-radius:20px;
+
+    margin-bottom:12px;
+
+    width:max-content;
+
+}
+/* ===================================================
+                PRODUCT DETAILS PAGE
+===================================================*/
+
+.product-page{
+
+    padding-bottom:120px;
+
+}
+
+/* ---------- Product Image ---------- */
+
+.product-image{
+
+    width:100%;
+
+    height:320px;
+
+    overflow:hidden;
+
+    background:#f4f4f4;
+
+}
+
+.product-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+/* ---------- Image Gallery ---------- */
+
+.thumbnail-gallery{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:12px;
+
+    margin:18px 0;
+
+}
+
+.thumbnail-gallery img{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:12px;
+
+    object-fit:cover;
+
+    cursor:pointer;
+
+    border:2px solid transparent;
+
+    transition:.3s;
+
+}
+
+.thumbnail-gallery img:hover{
+
+    border-color:var(--primary);
+
+    transform:scale(1.05);
+
+}
+
+/* ---------- Main Content ---------- */
+
+.product-details{
+
+    background:white;
+
+    border-radius:30px 30px 0 0;
+
+    margin-top:-15px;
+
+    padding:25px;
+
+    box-shadow:0 -10px 25px rgba(0,0,0,.05);
+
+}
+
+/* ---------- Header ---------- */
+
+.product-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    margin-bottom:20px;
+
+}
+
+.product-title h2{
+
+    font-size:30px;
+
+    margin-bottom:6px;
+
+}
+
+.product-id{
+
+    color:#888;
+
+    font-size:14px;
+
+}
+
+.price{
+
+    color:#1AAE4A;
+
+    font-size:30px;
+
+    font-weight:700;
+
+}
+
+.stock{
+
+    margin-top:8px;
+
+    display:inline-block;
+
+    background:#E9F8EF;
+
+    color:#1AAE4A;
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+/* ---------- Description ---------- */
+
+.section{
+
+    margin-top:28px;
+
+}
+
+.section h3{
+
+    margin-bottom:12px;
+
+    color:var(--primary);
+
+}
+
+.section p{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+/* ---------- Specification Card ---------- */
+
+.spec-card{
+
+    margin-top:20px;
+
+    background:#fafafa;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    border:1px solid #ececec;
+
+}
+
+.spec-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:12px 0;
+
+    border-bottom:1px solid #eee;
+
+}
+
+.spec-row:last-child{
+
+    border:none;
+
+}
+
+.spec-title{
+
+    color:#666;
+
+}
+
+.spec-value{
+
+    font-weight:600;
+
+}
+
+/* ---------- Feature Icons ---------- */
+
+.features{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+
+    margin-top:30px;
+
+}
+
+.feature{
+
+    background:white;
+
+    border-radius:16px;
+
+    padding:18px;
+
+    text-align:center;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.05);
+
+}
+
+.feature i{
+
+    font-size:28px;
+
+    color:var(--primary);
+
+    margin-bottom:10px;
+
+}
+
+.feature h4{
+
+    margin-bottom:5px;
+
+}
+
+/* ---------- WhatsApp Button ---------- */
+
+.whatsapp-btn{
+
+    position:fixed;
+
+    left:50%;
+
+    bottom:20px;
+
+    transform:translateX(-50%);
+
+    width:calc(100% - 30px);
+
+    max-width:450px;
+
+    background:#25D366;
+
+    color:white;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:18px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    box-shadow:0 15px 30px rgba(37,211,102,.35);
+
+    transition:.35s;
+
+}
+
+.whatsapp-btn:hover{
+
+    background:#1EBE5D;
+
+    transform:translateX(-50%) translateY(-4px);
+
+}
+
+.whatsapp-btn i{
+
+    font-size:24px;
+
+}
+/* ===================================================
+                FOOTER
+=================================================== */
+
+.footer{
+
+    background:#2F2A27;
+
+    color:white;
+
+    text-align:center;
+
+    padding:40px 20px;
+
+    margin-top:40px;
+
+}
+
+.footer h3{
+
+    margin-bottom:12px;
+
+    font-size:22px;
+
+}
+
+.footer p{
+
+    color:#d6d6d6;
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+.footer-links{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    margin:20px 0;
+
+}
+
+.footer-links a{
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+    color:#D8B08C;
+
+}
+
+.footer-copy{
+
+    margin-top:20px;
+
+    font-size:13px;
+
+    color:#bbb;
+
+}
+
+
+/* ===================================================
+                BOTTOM NAVIGATION
+=================================================== */
+
+.bottom-nav{
+
+    position:fixed;
+
+    bottom:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:100%;
+
+    max-width:480px;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    padding:14px 0;
+
+    border-top:1px solid #ececec;
+
+    box-shadow:0 -6px 20px rgba(0,0,0,.06);
+
+    z-index:999;
+
+}
+
+.nav-item{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    color:#777;
+
+    font-size:12px;
+
+    transition:.3s;
+
+}
+
+.nav-item i{
+
+    font-size:20px;
+
+    margin-bottom:5px;
+
+}
+
+.nav-item:hover{
+
+    color:var(--primary);
+
+}
+
+.nav-item.active{
+
+    color:var(--primary);
+
+    font-weight:600;
+
+}
+
+
+/* ===================================================
+                COMMON UTILITIES
+=================================================== */
+
+.container{
+
+    width:100%;
+
+    padding:20px;
+
+}
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.mt-10{
+
+    margin-top:10px;
+
+}
+
+.mt-20{
+
+    margin-top:20px;
+
+}
+
+.mt-30{
+
+    margin-top:30px;
+
+}
+
+.mb-20{
+
+    margin-bottom:20px;
+
+}
+
+.hidden{
+
+    display:none;
+
+}
+
+
+/* ===================================================
+                IMAGE HOVER
+=================================================== */
+
+img{
+
+    transition:.35s;
+
+}
+
+img:hover{
+
+    transform:scale(1.03);
+
+}
+
+
+/* ===================================================
+                CARD HOVER
+=================================================== */
+
+.category-card,
+.product-list-card,
+.feature,
+.card{
+
+    transition:.35s;
+
+}
+
+.category-card:hover,
+.product-list-card:hover,
+.feature:hover,
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 35px rgba(0,0,0,.12);
+
+}
+
+
+/* ===================================================
+                BUTTON EFFECT
+=================================================== */
+
+button{
+
+    transition:.35s;
+
+}
+
+button:active{
+
+    transform:scale(.98);
+
+}
+
+
+/* ===================================================
+                FADE ANIMATION
+=================================================== */
+
+.fade-in{
+
+    animation:fadeIn .6s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* ===================================================
+                RESPONSIVE
+=================================================== */
+
+@media(max-width:768px){
+
+.hero-content{
+
+    width:80%;
+
+}
+
+.hero-content h2{
+
+    font-size:28px;
+
+}
+
+.product-image{
+
+    height:260px;
+
+}
+
+.category-grid{
+
+    gap:15px;
+
+}
+
+.product-list-card{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+.product-list-card img{
+
+    width:100%;
+
+    height:200px;
+
+}
+
+.product-info{
+
+    width:100%;
+
+}
+
+}
+
+
+@media(max-width:480px){
+
+.app-container{
+
+    max-width:100%;
+
+    box-shadow:none;
+
+}
+
+.header{
+
+    padding:16px;
+
+}
+
+.hero-banner{
+
+    height:190px;
+
+}
+
+.hero-content h2{
+
+    font-size:24px;
+
+}
+
+.hero-content p{
+
+    font-size:14px;
+
+}
+
+.category-grid{
+
+    grid-template-columns:1fr 1fr;
+
+}
+
+.category-card img{
+
+    height:100px;
+
+}
+
+.product-image{
+
+    height:220px;
+
+}
+
+.product-title h2{
+
+    font-size:24px;
+
+}
+
+.price{
+
+    font-size:24px;
+
+}
+
+.whatsapp-btn{
+
+    width:calc(100% - 20px);
+
+    padding:16px;
+
+}
+
+}
+
+
+@media(min-width:992px){
+
+.app-container{
+
+    max-width:480px;
+
+}
+
+}

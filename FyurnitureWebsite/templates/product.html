@@ -1,0 +1,214 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- ===========================
+            HEADER
+=========================== -->
+
+<header class="header">
+
+    <a href="{{ url_for('category', category_name=product.category) }}" class="back-btn">
+        <i class="fa-solid fa-arrow-left"></i>
+    </a>
+
+    <h2>Product Details</h2>
+
+    <i></i>
+
+</header>
+
+
+
+<!-- ===========================
+        PRODUCT PAGE
+=========================== -->
+
+<div class="product-page">
+
+    <!-- Product Image -->
+
+    <div class="product-image">
+
+        <img
+            id="productImage"
+            src="{{ product.image }}"
+            alt="{{ product.name }}">
+
+    </div>
+
+
+    <!-- Image Gallery -->
+
+    <div class="thumbnail-gallery">
+
+        <img src="{{ product.image }}" onclick="changeImage(this)">
+        <img src="{{ product.image }}" onclick="changeImage(this)">
+        <img src="{{ product.image }}" onclick="changeImage(this)">
+
+    </div>
+
+
+
+    <!-- Product Details -->
+
+    <div class="product-details">
+
+        <div class="product-header">
+
+            <div class="product-title">
+
+                <h2 id="productName">
+
+                    {{ product.name }}
+
+                </h2>
+
+                <div class="product-id">
+
+                    Product ID :
+                    <span id="productId">{{ product.id }}</span>
+
+                </div>
+
+            </div>
+
+            <div>
+
+                <div
+                    class="price"
+                    id="productPrice">
+
+                    {{ product.price }}
+
+                </div>
+
+                <span class="stock">
+
+                    {{ product.availability }}
+
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Description -->
+
+        <div class="section">
+
+            <h3>Description</h3>
+
+            <p>
+
+                {{ product.description }}
+
+            </p>
+
+        </div>
+
+
+
+        <!-- Specifications -->
+
+        <div class="spec-card">
+
+            <div class="spec-row">
+
+                <span class="spec-title">
+
+                    Material
+
+                </span>
+
+                <span
+                    class="spec-value"
+                    id="material">
+
+                    {{ product.material }}
+
+                </span>
+
+            </div>
+
+            <div class="spec-row">
+
+                <span class="spec-title">
+
+                    Colour
+
+                </span>
+
+                <span class="spec-value">
+
+                    {{ product.colour }}
+
+                </span>
+
+            </div>
+
+            <div class="spec-row">
+
+                <span class="spec-title">
+
+                    Dimensions
+
+                </span>
+
+                <span class="spec-value">
+
+                    {{ product.dimensions }}
+
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Features -->
+
+        <div class="features">
+
+            <div class="feature">
+
+                <i class="fa-solid fa-couch"></i>
+
+                <h4>Premium Quality</h4>
+
+            </div>
+
+            <div class="feature">
+
+                <i class="fa-solid fa-award"></i>
+
+                <h4>Long Lasting</h4>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ===========================
+      WHATSAPP BUTTON
+=========================== -->
+
+<button
+    class="whatsapp-btn"
+    onclick="sendWhatsApp()">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+    Enquire on WhatsApp
+
+</button>
+
+{% endblock %}

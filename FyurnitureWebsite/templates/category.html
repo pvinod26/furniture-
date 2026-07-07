@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- ===========================
+        HEADER
+=========================== -->
+
+<header class="header">
+
+    <a href="/home" class="back-btn">
+
+        <i class="fa-solid fa-arrow-left"></i>
+
+    </a>
+
+    <h2>
+
+        {{ category }}
+
+    </h2>
+
+    <i ></i>
+
+</header>
+
+
+<br/><br/>
+<!-- ===========================
+        PRODUCT LIST
+=========================== -->
+
+<div class="product-list">
+
+    {% if products %}
+
+        {% for product in products %}
+
+        <a
+            href="{{ url_for('product', product_id=product.id) }}"
+            class="product-list-card">
+
+            <img
+                src="{{ product.image }}"
+                alt="{{ product.name }}">
+
+            <div class="product-info">
+
+                <div>
+
+                    <span class="product-tag">
+
+                        Premium
+
+                    </span>
+
+                    <h4>
+
+                        {{ product.name }}
+
+                    </h4>
+
+                    <p>
+
+                        {{ product.description }}
+
+                    </p>
+
+                </div>
+
+                <div class="product-bottom">
+
+                    <div class="price">
+
+                        {{ product.price }}
+
+                    </div>
+
+                    <span class="view-btn">
+
+                        View →
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </a>
+
+        {% endfor %}
+
+    {% else %}
+
+        <div class="container">
+
+            <h3>No Products Found</h3>
+
+            <p>
+
+                There are currently no products available in this category.
+
+            </p>
+
+        </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}
