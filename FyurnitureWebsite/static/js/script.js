@@ -98,7 +98,7 @@ Please share more details regarding availability and delivery.
 
 Thank you.`;
 
-    const phone = "919876543210";
+    const phone = "917386033266";
 
     window.open(
 
